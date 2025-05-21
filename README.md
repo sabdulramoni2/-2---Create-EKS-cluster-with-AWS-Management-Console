@@ -85,11 +85,12 @@ This project demonstrates the use of AWS console to create EKS cluster.
  - Why new VPC? Cos EKS cluster needs specific networking configuration.
  - Use AWS cloud formation to create the VPC.
  - Select create stack.
+   
    ![image](https://github.com/user-attachments/assets/e2f759c4-f9fc-413f-b797-8c998f8862b2)
 
  - Use the template file to create the VPC.
 
-       ![image](https://github.com/user-attachments/assets/7acf1462-9488-4fed-bfac-5478e5b34297)
+   ![image](https://github.com/user-attachments/assets/7acf1462-9488-4fed-bfac-5478e5b34297)
 
 
 #### **Create EKS cluster (control plane)**
@@ -112,7 +113,7 @@ This project demonstrates the use of AWS console to create EKS cluster.
          kubectl get nodes
     ``` 
 
-      ![image](https://github.com/user-attachments/assets/afdd7165-467e-4c63-9e0b-ebba8bd7cb4b)
+  ![image](https://github.com/user-attachments/assets/afdd7165-467e-4c63-9e0b-ebba8bd7cb4b)
   
 
 ### **Create EC2 IAM role for node Node Group**
@@ -129,15 +130,15 @@ This project demonstrates the use of AWS console to create EKS cluster.
 - Select the network configuration, key pair and SG.
 - Create the Node group.
 
-        ![image](https://github.com/user-attachments/assets/63eae7c8-1c53-46f5-b9a2-b00e8fb8886e)
+  ![image](https://github.com/user-attachments/assets/63eae7c8-1c53-46f5-b9a2-b00e8fb8886e)
 
-        ![image](https://github.com/user-attachments/assets/e059c6b1-c518-43cb-81b0-caac3026d72a)
+  ![image](https://github.com/user-attachments/assets/e059c6b1-c518-43cb-81b0-caac3026d72a)
 
-        ![image](https://github.com/user-attachments/assets/847af745-857b-4d4c-8d34-a5850f6193f6)
+  ![image](https://github.com/user-attachments/assets/847af745-857b-4d4c-8d34-a5850f6193f6)
 
-        ![image](https://github.com/user-attachments/assets/aec28b97-124b-4c18-83ea-8dfb5e086575)
+  ![image](https://github.com/user-attachments/assets/aec28b97-124b-4c18-83ea-8dfb5e086575)
 
-        ![image](https://github.com/user-attachments/assets/12042d9e-b689-4d21-be47-b8cc801f4dff)
+  ![image](https://github.com/user-attachments/assets/12042d9e-b689-4d21-be47-b8cc801f4dff)
 
 
 
@@ -147,20 +148,20 @@ This project demonstrates the use of AWS console to create EKS cluster.
 - But this doesn’t automatically scale the resources for us yet.
 - Now we must configure the k8 autoscaler with auto scaling group.
   
-       ![image](https://github.com/user-attachments/assets/338683c4-04c4-425e-b3b7-d3c846407718)
+  ![image](https://github.com/user-attachments/assets/338683c4-04c4-425e-b3b7-d3c846407718)
 
 - Create a custom role for the EC2 instance to use the auto scaling.
 - Created new Policy for Auto-Scaling Permission.
 - Attach the new policy to the node group role.
 
-       ![image](https://github.com/user-attachments/assets/ea51cd3f-452d-4fb5-ad9d-f08910bca809)
+   ![image](https://github.com/user-attachments/assets/ea51cd3f-452d-4fb5-ad9d-f08910bca809)
   
 
 - The k8 autoscaler use tags to identify the AWS auto scaling group.
 
-       ![image](https://github.com/user-attachments/assets/ea2ad981-76fb-478e-aa92-2b74ae58a9fb)
+  ![image](https://github.com/user-attachments/assets/ea2ad981-76fb-478e-aa92-2b74ae58a9fb)
 
-       ![image](https://github.com/user-attachments/assets/cb0c42eb-85cf-4faf-930a-d2a0de3f3c7c)
+  ![image](https://github.com/user-attachments/assets/cb0c42eb-85cf-4faf-930a-d2a0de3f3c7c)
 
 
 - Deployed Auscaler Component in EKS cluster.
@@ -173,22 +174,22 @@ This project demonstrates the use of AWS console to create EKS cluster.
 ### **Deploy application to EKS cluster**
 - Deployed a nginx application with load balancer external service.
 
-        ![image](https://github.com/user-attachments/assets/091f3f9f-ce68-45e0-aa3f-4e3e85618dad)
+  ![image](https://github.com/user-attachments/assets/091f3f9f-ce68-45e0-aa3f-4e3e85618dad)
 
 - Access the application from the load balancer.
 
-        ![image](https://github.com/user-attachments/assets/338a9f44-71c6-440c-a93b-54baed3165f7)
+  ![image](https://github.com/user-attachments/assets/338a9f44-71c6-440c-a93b-54baed3165f7)
 
 
-         ![image](https://github.com/user-attachments/assets/133822ad-0c7b-483d-b2d5-95a1f3b7ea89)
+  ![image](https://github.com/user-attachments/assets/133822ad-0c7b-483d-b2d5-95a1f3b7ea89)
 
-         ![image](https://github.com/user-attachments/assets/8443d13f-354b-49d0-b529-fc26f5636343)
+  ![image](https://github.com/user-attachments/assets/8443d13f-354b-49d0-b529-fc26f5636343)
 
-         ![image](https://github.com/user-attachments/assets/c083b7cc-2dea-4b6d-a36e-ba6959c01e91)
+  ![image](https://github.com/user-attachments/assets/c083b7cc-2dea-4b6d-a36e-ba6959c01e91)
 
-         ![image](https://github.com/user-attachments/assets/0e51b3b8-2061-4fa5-9e5e-89feae8ed36d)
+  ![image](https://github.com/user-attachments/assets/0e51b3b8-2061-4fa5-9e5e-89feae8ed36d)
 
-         ![image](https://github.com/user-attachments/assets/fc1291fd-cf3f-4314-aad0-3008e458ae8d)
+  ![image](https://github.com/user-attachments/assets/fc1291fd-cf3f-4314-aad0-3008e458ae8d)
 
 
 

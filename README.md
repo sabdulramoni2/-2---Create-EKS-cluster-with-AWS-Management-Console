@@ -1,4 +1,4 @@
-# Deploying MongoDB and Mongo Express
+# Create EKS cluster with AWS Management Console
 
 ## **Project Overview**
 This project demonstrates the use of AWS console to create EKS cluster. 

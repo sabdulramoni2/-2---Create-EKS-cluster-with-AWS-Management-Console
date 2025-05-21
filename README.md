@@ -7,7 +7,7 @@ This project demonstrates the use of AWS console to create EKS cluster.
   
 ## **Feature**
 
-#### **Creates EKS IAM role**
+### **Creates EKS IAM role**
  - Go to IAM
  - Select the service you want to give the role to (EKS)
  - Select EKS-cluster as the use case.
@@ -19,7 +19,7 @@ This project demonstrates the use of AWS console to create EKS cluster.
  - Select create stack.
  - Use the template file to create the VPC.
 
-#### **Create EKS cluster (control plane)**
+### **Create EKS cluster (control plane)**
  - Name your cluster, select k8 version, select encryption.
  - Select your VPC, select the SG of the VPC.
  - Cluster endpoint access (Select public). Public = accessible from outside the VPC.

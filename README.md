@@ -188,6 +188,8 @@ This project demonstrates the use of AWS console to create EKS cluster.
   ![image](https://github.com/user-attachments/assets/c083b7cc-2dea-4b6d-a36e-ba6959c01e91)
 
   ![image](https://github.com/user-attachments/assets/0e51b3b8-2061-4fa5-9e5e-89feae8ed36d)
+  
+- Started 20 Pods - see autoscaling in action
 
   ![image](https://github.com/user-attachments/assets/fc1291fd-cf3f-4314-aad0-3008e458ae8d)
 

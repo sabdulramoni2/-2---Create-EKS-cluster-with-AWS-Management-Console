@@ -1,7 +1,7 @@
 # Deploying MongoDB and Mongo Express
 
 ## **Project Overview**
-This project demonstrates building a web application (Mango-express)  and its database (Mango-db). 
+This project demonstrates the use of AWS console to create EKS cluster. 
 
 ---
 

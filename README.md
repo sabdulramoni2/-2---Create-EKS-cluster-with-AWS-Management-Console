@@ -66,7 +66,7 @@ This project demonstrates the use of AWS console to create EKS cluster.
      - skip-node-with-system-pods=false,
      - version (version needs to be the same as the k8 version running in the cluster).
 
-8.	Deploy application to EKS cluster.
-a.	Deployed a nginx application with load balancer external service.
-b.	Access the application from the load balancer.
+### **Deploy application to EKS cluster**
+- Deployed a nginx application with load balancer external service.
+- Access the application from the load balancer.
 

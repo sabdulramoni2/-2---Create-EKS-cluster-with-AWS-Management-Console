@@ -77,6 +77,9 @@ This project demonstrates the use of AWS console to create EKS cluster.
  - Select the service you want to give the role to (EKS)
  - Select EKS-cluster as the use case.
  - Attach EKS-cluster policy
+   
+      ![image](https://github.com/user-attachments/assets/fe38a1d5-4345-4a32-be39-eda53a5bd8fd)
+
 
 ### **Creates VPC for the worker nodes**
  - Why new VPC? Cos EKS cluster needs specific networking configuration.

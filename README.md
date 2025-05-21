@@ -85,8 +85,7 @@ This project demonstrates the use of AWS console to create EKS cluster.
  - Why new VPC? Cos EKS cluster needs specific networking configuration.
  - Use AWS cloud formation to create the VPC.
  - Select create stack.
-   
-       ![image](https://github.com/user-attachments/assets/e2f759c4-f9fc-413f-b797-8c998f8862b2)
+   ![image](https://github.com/user-attachments/assets/e2f759c4-f9fc-413f-b797-8c998f8862b2)
 
  - Use the template file to create the VPC.
 

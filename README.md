@@ -60,10 +60,10 @@ This project demonstrates the use of AWS console to create EKS cluster.
 - Attach the new policy to the node group role.
 - The k8 autoscaler use tags to identify the AWS auto scaling group.
 - Deployed Auscaler Component in EKS cluster.
-    --  Edit the deployment to add; cluster-autoscaler.kubernetes.io/safe-to-evict: ‘false
-    -- name of the cluster
-    --  - -- balance-similar-node-groups,
-    -- - --skip-node-with-system-pods=false, version. Version needs to be the same as the k8 version running in the cluster.
+     -  Edit the deployment to add; cluster-autoscaler.kubernetes.io/safe-to-evict: ‘false
+     - name of the cluster
+     -  - -- balance-similar-node-groups,
+     - - --skip-node-with-system-pods=false, version. Version needs to be the same as the k8 version running in the cluster.
 
 8.	Deploy application to EKS cluster.
 a.	Deployed a nginx application with load balancer external service.

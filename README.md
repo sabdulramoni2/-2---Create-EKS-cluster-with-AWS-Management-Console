@@ -13,23 +13,29 @@ This project demonstrates the use of AWS console to create EKS cluster.
  - Select EKS-cluster as the use case.
  - Attach EKS-cluster policy
 
-2.	Creates VPC for the worker nodes.
-a.	Why new VPC? Cos EKS cluster needs specific networking configuration.
-b.	Use AWS cloud formation to create the VPC.
-c.	Select create stack.
-d.	Use the template file to create the VPC.
+### **Creates VPC for the worker nodes**
+ - Why new VPC? Cos EKS cluster needs specific networking configuration.
+ - Use AWS cloud formation to create the VPC.
+ - Select create stack.
+ - Use the template file to create the VPC.
 
-3.	Create EKS cluster (control plane).
-a.	Name your cluster, select k8 version, select encryption.
-b.	Select your VPC, select the SG of the VPC.
-c.	Cluster endpoint access (Select public). Public = accessible from outside the VPC.
+### **Create EKS cluster (control plane)**
+ - Name your cluster, select k8 version, select encryption.
+ - Select your VPC, select the SG of the VPC.
+ - Cluster endpoint access (Select public). Public = accessible from outside the VPC.
 
-4.	Connect to EKS cluster with kubectl from the local terminal.
-a.	Create a KUBECONFIG file by running the below command.
-b.	“aws eks update-kubeconfig - - name cluster_name”.
-c.	File is located in .kube/config.
-d.	See file by cat. kube/config.
-e.	Run kubectl get nodes to see the nodes in the cluster. 
+### **Connect to EKS cluster with kubectl from the local terminal**
+- Create a KUBECONFIG file by running the below command.
+    ```
+         aws eks update-kubeconfig - - name cluster_name
+    ```
+
+- File is located in .kube/config.
+- Run the command below to see the file
+    ```
+         cat. kube/config
+         kubectl get nodes
+    ``` 
 
 5.	Create EC2 IAM role for node Node Group.
 a.	Create role for EC2 service.
